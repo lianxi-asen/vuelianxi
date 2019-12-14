@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模块化</title>
+</head>
+<body>
+    <exte></exte>
+    <div id="app">
+        {{des}}
+        <!-- <exte></exte> -->
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <script>
+        //模块化
+        const exte = Vue.extend({
+            template:`
+                <h2>这是extend模块</h2>
+            `
+        })
+        new exte().$mount("exte")
+        //new 一个实例
+        new Vue({
+            el:"#app",//挂载点
+            data(){//数据
+                return {
+                    des:"exted虽然模块化 ，但是此模块只能用一次"
+                }
+            },
+            
+        })
+    </script>
+</body>
+</html>

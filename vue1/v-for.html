@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历数组</title>
+</head>
+<body>
+    	<div id="app">
+		{{des}}
+		<ul>
+			<li v-for="(item,index) in arr">{{item}}{{index}}</li>
+		</ul>
+	</div>
+
+
+
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+	
+	<script>
+		//new 一个Vue的实例 
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+					des:"v-for的语法： v-for='(item,index) in arr' item代表数组的每一个元素，index代表下标, in 上你要遍历的数组",
+					arr:["小明","小红","小刚","小蓉"]
+				}
+			
+			}
+	
+		})
+
+
+	</script>
+
+</body>
+</html>

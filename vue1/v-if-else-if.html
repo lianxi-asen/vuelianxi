@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    	<div id="app">
+		{{des}}
+		<p v-if="a>10">如果条件成立的话就显示这个</p>
+		<p v-else-if="b>30">如果条件不成立的话 就先这个</p>
+		<p v-else>在不成立 就显示这个</p>
+	
+	</div>
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+	
+	<script>
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+					des:"v-if是判断语句 一般可以自己使用 也可以配合着v-else-if，v-else 但是 三个一起使用的时候中间不能断开 ",
+					a:10,
+					b:40,
+					c:30
+				}
+			}
+		})
+	</script>
+
+	
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<style>
+		.color{
+			width:100px;
+			height:100px;
+			background-color:red;
+		}
+	</style>
+</head>
+<body>
+    	<div id="app">
+		<h2>{{des}}</h2>
+		<div class="color" v-on:click="change"></div>
+	</div>
+
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+	<script>
+		//new 一个Vue的实例
+		new Vue({
+			
+			el:"#app",
+			data(){
+				return {
+					des:"v-on的用法 v-on='事件函数名' v-on也可以简写  @事件='事件函数名'",
+				}
+
+			},
+			//事件函数都写在这里
+			methods:{
+				change(){
+					console.log(this)
+					
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>

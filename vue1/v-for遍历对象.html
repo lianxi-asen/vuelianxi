@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+	<div id="app">
+		{{des}}
+		<ul>
+
+			<li v-for="(item,jian,index) in json">{{jian}}:{{item}}:{{index}}</li>
+			{{json}}
+
+		</ul>
+
+	</div>
+
+
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+
+	<script>
+		//new 一个Vue实例
+		new Vue({
+			el:"#app",//挂载点
+			data(){
+
+				return {
+					des:"v-for遍历对象语法：v-for='(item,jian,index) in json ,item是每一个对象的键值，jian代表对象的每一个键，index代表下标，in data中的对象名'",
+					json:{
+						id:1,
+						name:"小明",
+						sex:"男",
+						age:18
+						
+					}
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>

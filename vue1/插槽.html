@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>{{des}}</h1>
+        <zidingyi>
+            <span slot="name">刘伟森</span>
+            <span slot="age">18岁</span>
+            <span slot="obj">夏洛雪</span>
+        </zidingyi>
+    </div>
+    <template id="abc">
+            <div>
+                <p>我是<slot name="name"></slot></p>
+                <p>今年<slot name="age"></slot></p>
+                <p>对象<slot name="obj"></slot></p>
+            </div>
+    </template>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script>
+
+     
+        new Vue({
+            el:"#app",
+            data(){
+                return {
+                    des:"插槽"
+                }
+            },
+            components:{
+                "zidingyi":{
+                    template:"#abc"
+                }
+            }
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{des}}
+        <div style="width: 100px;height:100px;background-color: red;" v-show="show"></div>
+    </div>
+
+
+        <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+        <script>
+            //new 一个vue的实例对象
+            new Vue({
+                el:"#app",//挂在点
+                data(){  //data中的数据
+                    return {
+                        des:"v-show一般就有两个值  true和false true就是显示，false不显示 六大假值 也是false 数字1往上是true v-show利用的是display:none/block,虽然在页面上不显示  但是在dom元素上还是显示的",
+                        show:1,
+                    }
+                }
+
+            })
+
+
+        </script>
+</body>
+</html>

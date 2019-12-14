@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+            <p v-text="text"></p>
+            <p v-html="html1"></p>
+        </div>
+
+        <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+        <script>
+            
+            new Vue({
+                el:"#app",
+                data(){
+                    return {
+                        text:"v-text是和innerText使用一样，可以把文字显示到页面上但是不解析标签，用法v-text='data中的变量' ",
+                        html1:"<h2>v-html和innerHtml一样 可以解析标签 并显示到页面上，用法 ： v--html='data中的变量'</h2>"
+                    }
+                }
+
+
+
+            })
+
+
+
+        </script>
+</body>
+</html>

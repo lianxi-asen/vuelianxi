@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{des}}<br>{{str}}</h1>
+        <zidingyi @hav="ccc"></zidingyi>
+    </div>
+    
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return {
+                    des:"字传父",
+                    str:""
+                }
+            },
+            methods:{
+                ccc(data){
+                    // console.log(data)
+                    this.str = data
+                }
+            },
+            components:{
+                "zidingyi":{
+                    data(){
+                        return {
+                            index:"我是孩子的值"
+                        }
+                    },
+                    template:`
+                        <div>
+                            <button @click="$emit('hav',index)">点击传值</button>
+                        </div>
+                    `,
+                    methods:{
+                        add(){
+                            this.$emit("hav",abc)
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
